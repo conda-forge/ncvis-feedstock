@@ -1,5 +1,5 @@
 {% set name = "ncvis" %}
-{% set version = "1.5.7" %}
+{% set version = "1.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c015d84b954d60d5a0985c8709b8dad7ef6274ae9b3cd1f41786ca2ba6f05224
+  sha256: 0c1f4bf609214c872ad349d6a22dfe8df9938b82afe65f151ea0ce909adafdcb
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py27]
 
 requirements:
@@ -45,13 +45,13 @@ test:
 
 about:
   home: https://github.com/stat-ml/ncvis
-  license_file: 
+  license_file:
     - LICENSE
     - lib/hnswlib/LICENSE
     - lib/pcg-cpp/LICENSE-APACHE.txt
   license: MIT
   license_family: MIT
-  summary: 'Efficient solution for data visualization'
+  summary: Efficient solution for data visualization
 
   description: |
     NCVis is an efficient solution for data visualization and dimensionality
@@ -64,4 +64,4 @@ about:
 
 extra:
   recipe-maintainers:
-   - alartum
+    - alartum
