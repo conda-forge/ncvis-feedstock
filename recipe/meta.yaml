@@ -11,7 +11,7 @@ source:
 
 build:
   number: 2
-  skip: true  # [py27]
+  skip: true  # [py==27]
 
 requirements:
   build:
