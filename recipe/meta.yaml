@@ -1,5 +1,5 @@
 {% set name = "ncvis" %}
-{% set version = "1.5.9" %}
+{% set version = "1.5.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e60e3c59eb7ff82e925f10869efee61652884d2843d5928c6ac91bae933ec63
+  sha256: bc91de8b2182d0e3bab9bcfdd4171fe409298e768f0f9ebb799f2b0ca6c19bf2
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py==27]
 
 requirements:
