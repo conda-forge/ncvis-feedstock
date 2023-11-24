@@ -42,7 +42,9 @@ test:
     - pytest
   commands:
     - python test_init.py
-    - pytest test.py
+    # Sometimes the OpenMP doesn't work correctly on CI
+    # We will rely on the tests for parallelism from the original repo
+    - pytest -k "not test_parallel" test.py
 
 about:
   home: https://github.com/stat-ml/ncvis
