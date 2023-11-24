@@ -26,6 +26,7 @@ requirements:
     - pip
     - numpy
     - cython
+    - pybind11
   run:
     - llvm-openmp  # [osx]
     - libgomp      # [linux and not aarch64]
