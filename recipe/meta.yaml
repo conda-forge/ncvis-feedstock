@@ -10,7 +10,7 @@ source:
   sha256: deeb8b2437ff39829261fd86419c00a648a114ff9885af7a8ba11daf76a7bbb7
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py==27]
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux and not aarch64]
@@ -36,7 +37,6 @@ requirements:
     - llvm-openmp  # [osx]
     - libgomp      # [linux and not aarch64]
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy
 
 test:
